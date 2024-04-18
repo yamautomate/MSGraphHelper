@@ -2,6 +2,8 @@
 Lets you easily connect to Graph API via PowerShell using EntraID App Registrations and stores secrets if needed.
 Essentially acts as a wrapper for "MSAL.PS" that further simplifies its use.
 
+Why not use PowerShell Graph SDK you might ask? Yeah, I don't really know either.
+
 # Application vs. delegated permissions
 Entra ID App registrations offers two ways of how API permissions can be applied and authenticated.
 - **Delegated Permissions:**

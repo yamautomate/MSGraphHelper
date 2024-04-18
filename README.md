@@ -21,7 +21,7 @@ MSGraphHelper requires the following:
   - clientSecret (Only when using Application Permissions)
  
 ## Dependencies 
-- PowerShell Module "MSAL.PS2
+- PowerShell Module "MSAL.PS"
 - PowerShell Module "CredentialManager"
 
 

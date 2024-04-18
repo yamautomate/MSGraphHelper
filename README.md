@@ -24,6 +24,19 @@ MSGraphHelper requires the following:
 - PowerShell Module "MSAL.PS"
 - PowerShell Module "CredentialManager"
 
+## Available Functions
+| Function      | Description | Parameters |
+| ------------- | ------------- |------------- |
+|  `Get-AccessTokenMSAL-ApplicationPermission`  | 	Creates an MS Graph Access token using "MSAL.PS" for application permissions | `[string]$clientId` isMandatory, `[System.Security.SecureString]$clientSecret` isMandatory, `[string]$tenantId` is Mandatory  |
+| `Get-AccessTokenMSAL-DelegatedPermissions` 	 | 	Creates an MS Graph Access token using "MSAL.PS" for delegated permissions | `[string]$clientId`, `[string]$tenantId`  |
+| `New-LocalSecret`  | 		Generates a secure credential prompt to ask for clientSecret and stores it in Windows Credential Manager (default = system-wide)  | `[string]$clientId` isMandatory, `[string]$scope` isMandatory defaultScope = "System-Wide" (User, System-Wide)   |
+| `Get-LocalSecret`  | Retrieves a stord clientSecret to use	| `[string]$clientId` isMandatory, |
+| `Get-RequiredModules`  | Checks if required modules are installed and imported. Does so if not. | `[string]$moduleName` isMandatory,  |
+| `Read-Calendar`  | Looks up calendar entries that are marked as OOF in a given timeframe (default = next 30 days) for a given user | `[string]$accessToken` isMandatory, `[String]$fromUser` isMandatory, `[DateTime]$startDate`, `[DateTime]$endDate`  |
+| `Send-Email`  | Sends an E-Mail to the defined address from the defined useraccount | `[string]$accessToken` isMandatory, `[String]$recipientEmail` isMandatory, `[String]$subject` isMandatory, `[String]$body` isMandatory, `[String]$fromUserIdOrUpn` isMandatory,  |
+
+
+
 
 ## Install the Module
 To use the functions made available via the "MSGraphHelper" module, you need to install the module from PowerShell Gallery first, by using 'Install-Module'.
